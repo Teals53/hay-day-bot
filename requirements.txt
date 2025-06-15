@@ -1,0 +1,16 @@
+# HayDay Bot - Optimized Dependencies
+# Install with: pip install -r requirements.txt
+
+# Computer Vision (headless for better performance)
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+
+# GUI and Image Display
+Pillow>=10.0.0
+
+# Automation and Input Control
+pyautogui>=0.9.54
+keyboard>=0.13.5
+
+# Fast Screen Capture
+mss>=9.0.1
