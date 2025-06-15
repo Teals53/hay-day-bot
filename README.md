@@ -2,9 +2,9 @@
 
 A lightweight, optimized farming bot for HayDay with a modern, clean interface designed for speed and efficiency.
 
-![image](https://github.com/user-attachments/assets/dd14ae9c-2580-4355-a239-eae2180c03c6)
+![image](https://github.com/user-attachments/assets/c086185b-b768-4d44-940b-f13f572d46b2)
 
-<video src="https://github.com/user-attachments/assets/47ae4656-64c3-4d53-bc1a-14420b78d5b8" width="352" height="720"></video>
+<video src="https://github.com/user-attachments/assets/8381fff0-a764-4137-88e0-cd98cf8f8dca" width="352" height="720"></video>
 
 ## ✨ **Key Features**
 
