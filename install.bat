@@ -37,18 +37,47 @@ if errorlevel 1 (
 echo.
 
 echo [4/4] Testing installation...
-python -c "import cv2, numpy, PIL, pyautogui, keyboard, mss, tkinter; print('All dependencies installed successfully!')"
+echo Testing core dependencies...
+
+echo import sys > test_deps.py
+echo try: >> test_deps.py
+echo     import cv2; print('✓ OpenCV:', cv2.__version__) >> test_deps.py
+echo     import numpy; print('✓ NumPy:', numpy.__version__) >> test_deps.py
+echo     import PIL; print('✓ Pillow:', PIL.__version__) >> test_deps.py
+echo     import pyautogui; print('✓ PyAutoGUI:', pyautogui.__version__) >> test_deps.py
+echo     import keyboard; print('✓ Keyboard: Available') >> test_deps.py
+echo     import mss; print('✓ MSS: Available') >> test_deps.py
+echo     import tkinter; print('✓ Tkinter: Available') >> test_deps.py
+echo     print('All dependencies verified successfully!') >> test_deps.py
+echo except ImportError as e: >> test_deps.py
+echo     print('ERROR: Missing dependency -', str(e)) >> test_deps.py
+echo     sys.exit(1) >> test_deps.py
+
+python test_deps.py
 if errorlevel 1 (
+    echo.
     echo ERROR: Some dependencies failed to install properly
-    echo Please check the error messages above
+    echo Please check the error messages above and run install.bat again
+    del test_deps.py 2>nul
     pause
     exit /b 1
 )
+
+del test_deps.py 2>nul
 
 echo.
 echo ========================================
 echo   Installation completed successfully!
 echo ========================================
+echo.
+echo All dependencies verified:
+echo - OpenCV (Computer Vision)
+echo - NumPy (Array Processing)  
+echo - Pillow (Image Processing)
+echo - PyAutoGUI (Automation)
+echo - Keyboard (Hotkeys)
+echo - MSS (Screen Capture)
+echo - Tkinter (GUI Framework)
 echo.
 echo You can now run the bot using:
 echo   - Double-click "start.bat"

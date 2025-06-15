@@ -18,18 +18,25 @@ if errorlevel 1 (
 python --version
 echo.
 
-echo [INFO] Checking dependencies...
-python -c "import cv2, numpy, PIL, pyautogui, keyboard, mss" >nul 2>&1
+echo [INFO] Checking core dependencies...
+
+echo import sys > check_deps.py
+echo try: >> check_deps.py
+echo     import cv2, numpy, PIL, pyautogui, keyboard, mss, tkinter >> check_deps.py
+echo     print('[INFO] All dependencies available!') >> check_deps.py
+echo except ImportError as e: >> check_deps.py
+echo     print('[ERROR] Missing dependency:', str(e)) >> check_deps.py
+echo     print('Please run install.bat to install missing dependencies') >> check_deps.py
+echo     sys.exit(1) >> check_deps.py
+
+python check_deps.py
 if errorlevel 1 (
-    echo [ERROR] Dependencies missing
-    echo Please run install.bat first
-    echo.
+    del check_deps.py 2>nul
     pause
     exit /b 1
 )
 
-echo [INFO] All dependencies ready!
-echo.
+del check_deps.py 2>nul
 
 echo [INFO] Starting HayDay Bot...
 echo ========================================

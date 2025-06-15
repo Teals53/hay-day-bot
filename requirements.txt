@@ -1,12 +1,12 @@
-# HayDay Bot - Optimized Dependencies
+# HayDay Bot - Complete Dependencies
 # Install with: pip install -r requirements.txt
 
 # Computer Vision (headless for better performance)
-opencv-python-headless>=4.8.0
-numpy>=1.24.0
+opencv-python-headless>=4.8.0,<5.0.0
+numpy>=1.24.0,<2.0.0
 
 # GUI and Image Display
-Pillow>=10.0.0
+Pillow>=10.0.0,<11.0.0
 
 # Automation and Input Control
 pyautogui>=0.9.54
@@ -14,3 +14,7 @@ keyboard>=0.13.5
 
 # Fast Screen Capture
 mss>=9.0.1
+
+# Note: tkinter is included with Python standard library
+# Note: threading, time, sys, os, dataclasses, typing are part of Python standard library
+# Note: traceback is part of Python standard library
