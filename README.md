@@ -136,31 +136,6 @@ modular/
 - Dataclass-based state management for immutability
 - Centralized configuration management
 
-## 🔧 **Optimizations Made**
-
-### **Dependencies**
-- Switched to `opencv-python-headless` for better performance
-- Optimized dependency list with only essential packages
-- Removed unnecessary packages for faster installation
-
-### **Performance**
-- Reduced screen capture cache to 50ms for faster updates
-- Optimized mouse movement with minimal delays (0.05s)
-- Streamlined path execution with faster movement algorithms
-- Improved thread management and graceful shutdown (3s timeout)
-
-### **GUI**
-- Modern, clean interface with better styling and UX
-- Reduced visual complexity while maintaining functionality
-- Color-coded status indicators for quick feedback
-- Compact layout with essential controls only
-
-### **Code Quality**
-- Cleaned up configuration with logical grouping
-- Simplified error handling with specific exception types
-- Reduced code complexity while maintaining features
-- Better resource management and cleanup patterns
-
 ## 🎮 **Controls**
 
 - **F4**: Start Bot
@@ -173,7 +148,7 @@ modular/
 
 - **Python 3.7+** with pip package managers
 - **Windows 10/11** (PowerShell support)
-- **HayDay** running in windowed or fullscreen mode
+- **HayDay** running on emulator in windowed or fullscreen mode
 - **1080p or 2K resolution** (auto-detected with template switching)
 
 ## 🔍 **Troubleshooting**
